@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity() {
             } else {
                 if (binding.customPrice.visibility == View.VISIBLE) {
                     binding.customPrice.visibility = View.INVISIBLE
-                    binding.customPrice.setText("")
+                    binding.customPriceEditText.setText("")
                 }
             }
         }
     }
 
     private fun calculateTip() {
-        val cost = binding.costOfService.text.toString().toDoubleOrNull()
+        val cost = binding.costOfServiceEditText.text.toString().toDoubleOrNull()
         if (cost == null || cost == 0.0) {
             displayTip(0.0)
             return
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             R.id.option_fifteen_percent -> 0.15
             R.id.option_ten_percent -> 0.10
             else -> {
-                val percent = binding.customPrice.text.toString().toDoubleOrNull()
+                val percent = binding.customPriceEditText.text.toString().toDoubleOrNull()
                 if (percent == null || percent < 1) {
                     displayTip(0.0)
                     return
