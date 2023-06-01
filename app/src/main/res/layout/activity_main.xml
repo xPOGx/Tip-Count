@@ -70,7 +70,8 @@
         android:inputType="numberDecimal"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/round_up_switch"
-        app:layout_constraintStart_toEndOf="@+id/tip_options" />
+        app:layout_constraintStart_toEndOf="@+id/tip_options"
+        tools:visibility="visible" />
 
     <Switch
         android:id="@+id/round_up_switch"
