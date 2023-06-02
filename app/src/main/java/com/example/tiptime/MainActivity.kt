@@ -24,6 +24,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
         binding.customPriceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
+
+        binding.mainView.setOnClickListener { view -> hideKeyboard(view) }
+    }
+
+    private fun hideKeyboard(view: View) {
+        val inputMethodManager =
+            getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     private fun calculateTip() {
