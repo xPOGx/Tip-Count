@@ -20,9 +20,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.calculateButton.setOnClickListener { calculateTip() }
+
         binding.tipOptions.setOnCheckedChangeListener { _, checkedId -> showCustomEditView(checkedId) }
 
         binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
+
         binding.customPriceEditText.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode) }
 
         binding.mainView.setOnClickListener { view -> hideKeyboard(view) }
