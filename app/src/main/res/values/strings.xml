@@ -11,4 +11,7 @@
     <string name="tip_amount_start">No tips :(</string>
     <string name="tip_amount">Tip Amount: %s</string>
     <string name="custom_price">Custom</string>
+    <string name="store_image">Store image</string>
+    <string name="service_image">Service image</string>
+    <string name="round_up_image">Round up image</string>
 </resources>
